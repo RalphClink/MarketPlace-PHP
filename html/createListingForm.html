@@ -1,0 +1,25 @@
+<form id='createListingForm' action="createListing.php" method="POST" enctype="multipart/form-data">
+
+    <label for="listingName">Listing Name: </label>
+    <input name="listingName" type="text" />
+    <br>
+
+    <label for="listingDescription">Description: </label>
+    <!--<input name="listingDescription" type="text">
+    <br>
+    -->
+
+    <textarea name="listingDescription" form="createListingForm"></textarea>
+    <br>
+
+    <label for="listingPrice">Buy Now Price: </label>
+    <input name="listingPrice" type="number">
+    <br>
+
+    <label for="listingImage">Image: </label>
+    <input name="listingImage" type="file" accept="image/*">
+
+    <input type="submit" name="submit" value="Create Listing">
+
+</form>
+

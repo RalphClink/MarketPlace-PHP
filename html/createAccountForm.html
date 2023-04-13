@@ -1,0 +1,59 @@
+<!-- Script to Only Allow 1 Checkbox to be Ticked at a Time-->
+<script type="text/javascript">
+function checkedOnClick(el){
+
+    // Select all checkboxes by class
+    var checkboxesList = document.getElementsByClassName("checkoption");
+    for (var i = 0; i < checkboxesList.length; i++) {
+        checkboxesList.item(i).checked = false; // Uncheck all checkboxes
+    }
+
+    el.checked = true; // Checked clicked checkbox
+}
+</script>
+
+
+<form action="createAccount.php" method="POST">
+
+    <div id="formRow">
+        <label for="firstName">First Name: </label>
+        <input name="firstName" type="text" />
+        <br>
+    </div>
+
+    <div id="formRow">
+        <label for="lastName">Last Name: </label>
+        <input name="lastName" type="text" />
+        <br>
+    </div>
+
+    <div id="formRow">
+        <label for="email">Email: </label>
+        <input name="email" type="text" />
+        <br>
+    </div>
+
+    <div id="formRow">
+        <label for="hashedPassword">Password: </label>
+        <input name="hashedPassword" type="password" />
+        <br>
+    </div>
+    
+    <div id="formRowSecondary">
+        <label for="userType">Buyer</label>
+        <input class='checkoption' onClick='checkedOnClick(this);' name="userType" type="checkbox" value=0>
+
+        <label for="userType">Seller</label>
+        <input class='checkoption' onClick='checkedOnClick(this);' name="userType" type="checkbox" value=1>
+        <br>
+
+        <label for="userType">Admin</label>
+        <input class='checkoption' onClick='checkedOnClick(this);' name="userType" type="checkbox" value=2>
+        <br>
+    </div>
+
+    <div id="formRow">
+        <input type="submit" name="submit" value="Create Account">
+    </div>
+    
+</form>

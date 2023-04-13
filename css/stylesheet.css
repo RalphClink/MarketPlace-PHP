@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@200&display=swap');
+
+/* Main stuff that doesn't change based on screen size */
+
+body {
+    display: grid;
+    font-family: 'Trispace', sans-serif;    
+    font-size: 100%;
+}
+
+html {
+    background: rgb(11,171,100);
+    background: linear-gradient(149deg, rgba(11,171,100,1) 0%, rgba(49,124,100,1) 100%);
+    background-attachment: fixed;
+}
+
+#header, #nav {
+    color: black;
+}
+
+#content {
+    color: white;
+}
+
+
+form {
+    padding-top: 1%;
+}
+
+#header {
+    text-decoration: underline;
+}
+
+#searchListingResultRow a {
+    color: white;
+    text-decoration: none;
+}
+
+#searchListingResultRow a:hover {
+    color: black;
+}
+
+#searchbar {
+    padding: 8px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#submitButton {
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#content a {
+    color: white;
+    text-decoration: none;
+}
+
+#content a:hover {
+    color: black;
+}
+
+#addAccountLink {
+    
+}
+
+#businessLogoContainer img {
+    width: 100px;
+    height: 100px;
+}
+
+#updateBusiness {
+    margin-top: 25px;
+}
+
+#searchListingItem {
+    padding: 8px;
+}
+
+#searchListingItem img {
+    border: solid black 1px;
+}
+
+@media screen and (min-width: 22em) {
+
+    #header, #nav, #content {
+        text-align: center;
+    }
+
+    #nav a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #nav a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    #nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+}
+
+
+
+@media screen and (min-width: 42em) {
+
+    body {
+        grid-template-columns: 1fr 20rem 20rem 1fr;
+    }
+
+    #content {
+        display: flex;
+        min-height: 35vh;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 2%;
+        grid-column: 2 / 4;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    #serverConMessage {
+        grid-column: 1 / 2;
+        grid-area: footer;
+    }
+
+    #buildDBInfo {
+        grid-column: 2 / 4;
+    }
+
+    #header {
+        grid-column: 2 / 4;
+        text-align: center;
+    }
+
+    #nav {
+        grid-column: 2 / 4;
+    }
+
+    #nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+
+    #searchListingResult {
+        display: flex;
+        flex-direction: column;
+        width: 125%;
+    }
+
+    #searchListingItem img {
+        width: 300px;
+        height: 300px;
+    }
+
+    #listingResult {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 45px;
+        padding-right: 45px;
+        width: 100%;
+    }
+
+    #listingLeftSide {
+        padding-bottom: 15px;
+    }
+
+    #listingRightSide img{
+        width: 85%;
+        border: 1px black solid;
+    }
+
+
+    table, th, td {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #formRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 35vh;
+        padding: 4px;
+    }
+
+    #formRowSecondary {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media screen and (min-width: 62em) {
+
+    body {
+        grid-template-columns: 1fr 30rem 30rem 1fr;
+    }
+
+    #header {
+        grid-column: 1 / 3;
+        text-align: left;
+        padding-left: 3%;
+    }
+
+    #nav { 
+        grid-column: 3 / 5;
+    }
+
+    #nav ul {
+        margin-top: 5%;
+    }
+
+    #listingLeftSide {
+        float: left;
+    }
+
+    #listingRightSide {
+        width: 50%;
+        padding: 25px;
+        float: right;
+    }
+
+    #searchListingResult {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #searchListingResult img {
+        width: 75%;
+    }
+
+    #searchListingResultRow {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #listingResult {
+        flex-direction: row;
+    }
+    
+    #listingRightSide img {
+        width: 90%;
+        float: right;
+    }
+
+    #searchListingItem img {
+        width: 225px;
+        height: 225px;
+    }
+
+}
+
+@media screen and (min-width: 82em) {
+
+    body {
+        grid-template-columns: 1fr 40rem 40rem 1fr;
+    }
+
+    #nav ul {
+        margin-top: 4%;
+    }
+
+    #listingResult {
+        padding: 25px;
+    }
+
+    #searchListingItem img {
+        width: 250px;
+        height: 250px;
+    }
+
+
+}
+
+@media screen and (min-width: 102em) {
+    
+    body {
+        grid-template-columns: 1fr 50rem 50rem 1fr;
+    }
+
+}
+
+@media screen and (min-width: 122em) {
+    
+    body {
+        grid-template-columns: 1fr 60rem 60rem 1fr;
+    }
+
+}
+
+@media screen and (min-width: 142em) {
+
+    body {
+        grid-template-columns: 1fr 70rem 70rem 1fr;
+    }
+
+}
+
+
